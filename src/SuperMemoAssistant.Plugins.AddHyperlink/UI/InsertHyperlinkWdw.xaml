@@ -1,0 +1,55 @@
+﻿<Window x:Class="SuperMemoAssistant.Plugins.AddHyperlink.UI.InsertHyperlinkWdw"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuperMemoAssistant.Plugins.AddHyperlink.UI"
+        mc:Ignorable="d"
+        Title="Insert Hyperlink" Height="150" Width="270">
+    <Grid>
+
+    <Grid.RowDefinitions>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <DockPanel>
+      <TextBlock Text="Link Text: "
+                 FontWeight="Bold"
+                 Margin="5"
+                 VerticalAlignment="Center"/>
+      <TextBox Text="{Binding LinkText}"
+               TabIndex="0"
+               VerticalAlignment="Center"
+               Margin="5"/>
+    </DockPanel>
+        
+    <DockPanel Grid.Row="1">
+      <TextBlock Text="Link Url: "
+                 FontWeight="Bold"
+                 Margin="5"
+                 VerticalAlignment="Center"/>
+      <TextBox Text="{Binding LinkUrl}"
+               VerticalAlignment="Center"
+               TabIndex="1"
+               Margin="5"/>
+    </DockPanel>
+
+      <Grid Grid.Row="2">
+      <Button Click="Button_Click"
+              Content=" CANCEL "
+              TabIndex="2"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center"
+              Margin="5"/>
+
+      <Button Click="Button_Click_1"
+              Content=" INSERT "
+              TabIndex="3"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Center"
+              Margin="5"/>
+    </Grid>
+    </Grid>
+</Window>
